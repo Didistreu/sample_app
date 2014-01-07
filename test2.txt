@@ -1,0 +1,2 @@
+
+D:\Daten\Rails\sample_app>bundle exec rspec spec/ 
