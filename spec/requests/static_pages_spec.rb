@@ -1,4 +1,5 @@
 require 'spec_helper'
+
 include ApplicationHelper
 describe "Static pages" do
 
@@ -19,24 +20,24 @@ describe "Static pages" do
   end
 
   describe "Help page" do
-   before {visit help_path}
-   let(:heading) {'Help'}
-   let(:page_title) {'Help'}
+    before {visit help_path}
+    let(:heading) {'Help'}
+    let(:page_title) {'Help'}
   end
 
   describe "About page" do
     before {visit about_path}
-   let(:heading) {'About'}
-   let(:page_title) {'About Us'}
+    let(:heading) {'About'}
+    let(:page_title) {'About Us'}
   end
 
   describe "Contact page" do
     before {visit contact_path}
-   let(:heading) {'Contact'}
-   let(:page_title) {'Contact'}
+    let(:heading) {'Contact'}
+    let(:page_title) {'Contact'}
   end
-  
-   it "should have the right links on the layout" do
+
+  it "should have the right links on the layout" do
     visit root_path
     click_link "About"
     expect(page).to have_title(full_title('About Us'))
@@ -50,5 +51,5 @@ describe "Static pages" do
     click_link "sample app"
     expect(page).to have_title(full_title(''))
   end
-  
+
 end
